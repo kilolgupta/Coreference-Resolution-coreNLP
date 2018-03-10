@@ -1,0 +1,35 @@
+Please follow the following steps to obtain coreference between various entities and mentions in user defined text:
+1. The mail .java file is called coreferenceResolutionCaseless.java and the corresponding file for truecase text is 
+called coreferenceResolutionTrueCase.java
+2. The steps to obtain coreference using either truecase or caseless model are exactly the same.
+3. Change the text which is currently passed as an argument to new Annotation() function call in the line number 17 of the code, 
+enclosed by inverted commas
+4. Run the java file and the output will generated on the console.
+5. Sample output-
+
+Coreference information
+Chain 1
+  "many heartland states" in sentence 1, i.e., 0-based character offsets [5, 26)
+Chain 2
+  "iowa" in sentence 1, i.e., 0-based character offsets [29, 33)
+  "iowa 's" in sentence 24, i.e., 0-based character offsets [1890, 1896)
+  "it" in sentence 25, i.e., 0-based character offsets [1983, 1985)
+  "a goal that seems possible when on homecoming night the starting kicker is 14 - year - old nikita kargalskiy , who may be 
+  5,000 miles from his hometown in russia" in sentence 25, i.e., 0-based character offsets [1988, 2149)
+  "postville iowa" in sentence 26, i.e., 0-based character offsets [2177, 2191)
+Chain 3
+  "young people" in sentence 1, i.e., 0-based character offsets [58, 70)
+Chain 4
+  "the farm or anywhere" in sentence 1, i.e., 0-based character offsets [79, 99)
+Chain 5
+  "state lines" in sentence 1, i.e., 0-based character offsets [107, 118)
+Chain 6
+  "population waning" in sentence 2, i.e., 0-based character offsets [126, 143)
+  "its" in sentence 2, i.e., 0-based character offsets [174, 177)
+  .............
+
+
+
+  A chain means an entity along with its mentions. We assume the first entry in a chain to be the main entity and subsequent 
+  entries in the next lines its mentions. The character offsets tell the starting and ending index of the text enclosed in 
+  inverted commas.
